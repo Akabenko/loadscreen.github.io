@@ -1,0 +1,212 @@
+body {
+    align-content: center;
+    align-items: center;
+    background: rgb(31, 30, 30);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    justify-content: flex-start;
+    margin: 0px;
+    width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-logo {
+    top: 39%;
+    color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    text-align: center;
+    font-family: "to_stalker_font";
+    font-size: 235%;
+    animation: text_pulse 2s infinite ease-out;
+}
+
+.verticalLine {  
+    border-left: 725px solid;
+    border-left-color:rgba(255, 255, 255, 1);
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 88%;
+    position: absolute;
+    /* animation: lineWORK 11s infinite; */
+}
+
+.text-status::before {
+    content: "загрузка";
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    text-align: left;
+    font-family: "to_stalker_font";
+    font-size: 130%;
+    animation: text_status 8s infinite ease-out;
+}
+.text-status {
+    margin: 0 auto;
+    transform: translate(-50%,-50%);
+    top: 83%;
+    color: rgba(255, 255, 255, 0);
+    position: absolute;
+    text-align: center;
+    font-family: "to_stalker_font";
+    /* font-size: 130%; */
+    animation: text_status 8s infinite ease-out;
+}
+
+.darkestBackground {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    background-position: bottom;
+    background-size: cover;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    background-position: bottom;
+    background-size: cover;
+    /* background: url(../images/background.png); | Для проверки соответствия концепту загрузочного экрана*/
+    /* animation: change-backgrounds 42s infinite; */
+    /* animation-name: change-backgrounds;
+    animation-duration: 44s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, end); */
+}
+
+@font-face {
+    font-family: 'to_stalker_font';
+    src: url('../fonts/Jura-Regular.ttf');
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: fade 5s 2.5s linear infinite;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    0% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes lineWORK {
+    0% {
+        border-left: 0px solid white;
+    }
+    10% {
+        border-left: 100px solid white;
+    }
+    20% {
+        border-left: 200px solid white;
+    }
+    30% {
+        border-left: 300px solid white;
+    }
+    40% {
+        border-left: 350px solid white;
+    }
+    50% {
+        border-left: 400px solid white;
+    }
+    60% {
+        border-left: 475px solid white;
+    }
+    70% {
+        border-left: 725px solid white;
+    }  
+    80% {
+        border-left: 525px solid white;
+    }
+    90% {
+        border-left: 362px solid white;
+    }
+    100% {
+        border-left: 0px solid white;
+    }
+}
+
+@keyframes text_status {
+    0% {
+        content: "загрузка"
+    }
+    12.5% {
+        content: "загрузка."
+    }
+    25% {
+        content: "загрузка.."
+    }
+    37.5% {
+        content: "загрузка..."
+    }
+    50% {
+        content: "загрузка..."
+    }
+    62.5% {
+        content: "загрузка.."
+    }
+    75% {
+        content: "загрузка."
+    }
+    88% {
+        content: "загрузка"
+    }
+    100% {
+        content: "загрузка"
+    }
+}
+
+@keyframes text_pulse {
+    0% {
+        color: rgba(255, 255, 255, 1);
+    }
+    10% {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    20% {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    30% {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    40% {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        color: rgba(255, 255, 255, 1);
+    }
+    60% {
+        color: rgba(255, 255, 255, 1);
+    }
+    70% {
+        color: rgba(255, 255, 255, 1);
+    }
+    80% {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    90% {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+    }
+}
